@@ -83,21 +83,41 @@ public class Validate {
 		return yes;
 	}
 	public static boolean balanced(String[][] board) {
-		int count = 0;
 		for(int i = 0; i < board.length; i++) {
+			String str = "";
 			for(int j = 0; j < board[i].length; j++) {
 				if(!(board[i][j].equals("0"))) {
-					if() {
-						
+					if(str.length() > 2) {
+						return false;
 					}
-					count ++;
+					if(str.contains(board[i][j])) {
+						continue;
+					}
+					else {
+						str+=board[i][j];
+					}
 				}
 			}
 		}
-		
-		
-		
-		
+		for(int k = 0; k < 10 && k< board[k].length; k++) {
+			String str = "";
+			for(int j = 0; j < board.length; j++) {
+				if(!(board[k][j].equals("0"))) {
+					if(str.length() > 2) {
+						System.out.println("yes");
+						return false;
+					}
+					if(str.contains(board[k][j])) {
+						System.out.println("yes1");
+						continue;
+					}
+					else {
+						str+=board[k][j];
+					}
+				}
+				
+			}
+		}
 		return true;
 	}
 }
