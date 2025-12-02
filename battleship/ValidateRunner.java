@@ -20,7 +20,7 @@ public class ValidateRunner {
 		String[][] board1 = new String[10][10];
 		boolean yes = true;
 		boolean yes2 = true;
-		boolean yes3 = true;
+		boolean yes3 = false;
 		int row = 0;
 		while(scan1.hasNextLine()) {
 			line = scan1.nextLine();

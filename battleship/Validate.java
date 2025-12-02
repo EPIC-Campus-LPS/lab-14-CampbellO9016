@@ -102,17 +102,17 @@ public class Validate {
 		for(int k = 0; k < 10 && k< board[k].length; k++) {
 			String str = "";
 			for(int j = 0; j < board.length; j++) {
-				if(!(board[k][j].equals("0"))) {
+//				System.out.print(board[j][k]);
+				if(!(board[j][k].equals("0")) || j == 9) {
+					
 					if(str.length() > 2) {
-						System.out.println("yes");
 						return false;
 					}
-					if(str.contains(board[k][j])) {
-						System.out.println("yes1");
+					if(str.contains(board[j][k])) {
 						continue;
 					}
 					else {
-						str+=board[k][j];
+						str+=board[j][k];
 					}
 				}
 				
